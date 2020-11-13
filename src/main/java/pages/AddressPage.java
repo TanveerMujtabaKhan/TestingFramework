@@ -2,12 +2,8 @@ package pages;
 
 import base.Base;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 import utilities.Configuration;
-
 import java.util.Properties;
-
 import static utilities.Configuration.*;
 
 public class AddressPage extends Base {
@@ -24,9 +20,9 @@ public class AddressPage extends Base {
     /****************************************
      * Method To Add adress information ---- Usually we do it through Excel Test Data But just for Demo , passing from properties file
      *****************************************/
-    public void addAddressData(){
+    public void addAddressData(String productName){
         prop = new Properties();
-        getDriver().findElement(quantity).clear();
+        getDriver().findElement(By.xpath("//td[contains(text(),'"+productName+"')]//following::input[1]")).clear();
         getDriver().findElement(quantity).sendKeys(configuration.getProperty(QUANTITIES));
         getDriver().findElement(name).clear();
         getDriver().findElement(name).sendKeys(configuration.getProperty(CUSTOMERNNAME));
@@ -40,13 +36,11 @@ public class AddressPage extends Base {
         getDriver().findElement(address).sendKeys(configuration.getProperty(CUSADDRESS));
         getDriver().findElement(postalCode).clear();
         getDriver().findElement(postalCode).sendKeys(configuration.getProperty(POSTALCODE));
-
-
-
     }
 
-    public void clickCheckout(){
 
+    public void clickCheckout(){
         getDriver().findElement(checkout).click();
+        System.out.println("Customer Address is added successfully ");
     }
 }

@@ -157,16 +157,6 @@ public abstract class Base {
 
     }
 
-//	/****************************************
-//	 * Method To Wait For PageLoad if All Elements Present
-//	 *****************************************/
-//	public WebDriver explicitWaitvisibility(By elementBy) {
-//		wait = new WebDriverWait(getDriver(), 30);
-//		wait.until(ExpectedConditions.presenceOfElementLocated(elementBy));
-//
-//		return getDriver();
-//
-//	}
 
     /****************************************
      * Method To Wait For PageLoad if All Elements Present
