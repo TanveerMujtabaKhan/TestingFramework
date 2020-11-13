@@ -4,7 +4,7 @@
   <test thread-count="2" name="Test" >
     <classes>
       <class name="dkatalis.Test_TanveerMujtabaKhan.TC_01successPurchaseFlow"/>
-      <class name="dkatalis.Test_TanveerMujtabaKhan.TC_02FailedPurchaseFlow"/>
+      <class name="dkatalis.Test_TanveerMujtabaKhan.TC_02failedPurchaseFlow"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -70,7 +70,6 @@
           <version>1.2.3</version>
           <exclusions>
               <exclusion>
-                  <!-- Defined below -->
                   <artifactId>slf4j-api</artifactId>
                   <groupId>org.slf4j</groupId>
               </exclusion>

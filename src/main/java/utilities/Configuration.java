@@ -19,7 +19,7 @@ public class Configuration {
     public static String EXPIRYDATE ="expiryDate";
     public static String CVV ="CVV";
     public static String OTP="otp";
-
+    public static String PRODUCTNAME="productName";
 
 
     static
