@@ -8,6 +8,14 @@ In config.properties file , I have listed website URL, browser and even customer
 
 I have used TestNG testing framework, I have created an testng.xml where i have put the testcase to run.
 
+
+Cross Browser :
+
+Change the browser name in config.properties file
+For Google Chrome ----- chrome
+For FireFox ------------ firefox
+
+
 Directory Details :
 1- Config.properties currently has application url and execution Platform
 Location : src\main\java\configurations\config.properties
