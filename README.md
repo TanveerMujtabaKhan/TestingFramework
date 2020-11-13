@@ -8,7 +8,32 @@ In config.properties file , I have listed website URL, browser and even customer
 
 I have used TestNG testing framework, I have created an testng.xml where i have put the testcase to run.
 
+Directory Details :
+1- Config.properties currently has application url and execution Platform
+Location : src\main\java\configurations\config.properties
+2- Base class contains generic method like initialization Driver, browser and
+other selenium action which is extended across different classes
+Location : src\main\java\base\Base.java
+3- Methods are placed based on page object model where the page name is
+class name.
+Location : src\main\java\pages
+4- Test folder has main test case where we are calling other methods.
+Location : src\test\java\dkatalis\Test_TanveerMujtabaKhan
 
+Steps to run using command :
 
+How to Install &amp; run :
+
+1- Import the project as Maven project and install the maven dependencies by
+doing “Maven Install” from the IDE
+2- Once installation is complete, there will be zero errors.
+Run testing.xml which has test classes to run by 2 way:
+1- right click on xml and run as TestNG
+2- using command prompt with the command “mvn clean test -DsuiteXmlFile=testing.xml”
+Even you can run by going to the particular test class and run as TestNG
+
+Test class Name :
+1- TC_01successPurchaseFlow
+2- TC_02FailedPurchaseFlow
 
 
