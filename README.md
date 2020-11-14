@@ -11,21 +11,35 @@ I have used TestNG testing framework, I have created an testng.xml where i have 
 
 Cross Browser :
 
-Change the browser name in config.properties file
+Change the browser name in config.properties file ( src\main\java\configurations\config.properties) and change the browser to either chrome or firefox
+
 For Google Chrome ----- chrome
 For FireFox ------------ firefox
 
 
 Directory Details :
 1- Config.properties currently has application url and execution Platform
+
 Location : src\main\java\configurations\config.properties
+
+
 2- Base class contains generic method like initialization Driver, browser and
 other selenium action which is extended across different classes
+
+
 Location : src\main\java\base\Base.java
+
+
 3- Methods are placed based on page object model where the page name is
 class name.
+
+
 Location : src\main\java\pages
+
+
 4- Test folder has main test case where we are calling other methods.
+
+
 Location : src\test\java\dkatalis\Test_TanveerMujtabaKhan
 
 Steps to run using command :
