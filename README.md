@@ -14,6 +14,8 @@ Cross Browser :
 Change the browser name in config.properties file ( src\main\java\configurations\config.properties) and change the browser to either chrome or firefox
 
 For Google Chrome ----- chrome
+
+
 For FireFox ------------ firefox
 
 
