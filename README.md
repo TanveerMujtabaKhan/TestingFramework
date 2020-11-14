@@ -30,18 +30,32 @@ Location : src\test\java\dkatalis\Test_TanveerMujtabaKhan
 
 Steps to run using command :
 
-How to Install &amp; run :
+How to Install & run :
 
 1- Import the project as Maven project and install the maven dependencies by
 doing “Maven Install” from the IDE
+
+or
+
+using terminal, go inside the product and do "mvn install"
+
+
 2- Once installation is complete, there will be zero errors.
 Run testing.xml which has test classes to run by 2 way:
 1- right click on xml and run as TestNG
-2- using command prompt with the command “mvn clean test -DsuiteXmlFile=testing.xml”
+2- using command prompt with the command
+
+“mvn clean test -DsuiteXmlFile=testing.xml”
+
+
 Even you can run by going to the particular test class and run as TestNG
 
 Test class Name :
 1- TC_01successPurchaseFlow
 2- TC_02FailedPurchaseFlow
 
+Extent Report:
 
+Once you run testng.xml,
+
+you will get the html report in project directory ./
