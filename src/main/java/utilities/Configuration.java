@@ -8,7 +8,6 @@ public class Configuration {
     private static PropertiesConfiguration configuration;
 
     public static String MidtranURL = "midtransurl";
-    public static String EXECUTIONPLATFORM =  "executionplatform";
     public static String QUANTITIES =  "quantity";
     public static String CUSTOMERNNAME =  "customerName";
     public static String EMAIL =  "email";

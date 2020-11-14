@@ -31,9 +31,9 @@ public class TC_02failedPurchaseFlow extends Base {
 		payment.providePassword();
 		payment.clickSubmitOtp();
 		String paymentconfirmation= payment.verifyPayment();
-		if(paymentconfirmation.contains("Failed")){
+		if(paymentconfirmation.contains("failed")){
 
-			System.out.println("Please check the payment detail and retry");
+			System.out.println("Please check the payment detail and retry!!");
 			Assert.assertTrue(true);
 		}
 		else if(paymentconfirmation.contains("successful")){

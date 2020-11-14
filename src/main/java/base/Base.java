@@ -21,9 +21,12 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.BeforeSuite;
+import utilities.ExtentManager;
 
 public abstract class Base {
 
@@ -32,7 +35,6 @@ public abstract class Base {
     public Properties prop;
     public String midtrans;
     public static WebDriverWait wait;
-    public static PropertiesConfiguration configuration;
 
     public WebDriver getDriver() {
 
@@ -47,10 +49,7 @@ public abstract class Base {
         try {
             fis = new FileInputStream(path);
             prop.load(fis);
-            String executionplatform = prop.getProperty("executionplatform");
             String browser = prop.getProperty("browser");
-            char EXECUTIONPLATFORM = executionplatform.charAt(0);
-
                 if(browser.contains("chrome")) {
                     ChromeOptions options = new ChromeOptions();
                     WebDriverManager.chromedriver().setup();
@@ -90,8 +89,6 @@ public abstract class Base {
         getDriver().manage().window().maximize();
     }
 
-
-
     /****************************************
      * Method To Delete The Cookies
      *****************************************/
@@ -123,8 +120,6 @@ public abstract class Base {
         Wait wait1 = new FluentWait<WebDriver>(getDriver())
                 .withTimeout(50, TimeUnit.SECONDS).pollingEvery(3,TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
-
-
 
         return getDriver();
 
@@ -185,5 +180,22 @@ public abstract class Base {
 
         getDriver().quit();
 
+    }
+
+    /****************************************
+     * Method To End Extent Report
+     *****************************************/
+    @AfterSuite
+    public void afterSuite() {
+        ExtentManager.endReport();
+
+    }
+
+    /****************************************
+     * Method To Set Extent Report
+     *****************************************/
+    @BeforeSuite
+    public void setextent(){
+        ExtentManager.setExtent();
     }
 }

@@ -21,12 +21,17 @@ public class PaymentService extends Base {
     private By errormessage = By.xpath("//div[@class='pop-wrapper has-close danger show'] //Span[@class='pop']");
     Configuration configuration = new Configuration();
 
+    /****************************************
+     * Method To click Credit Card Pay Option
+     *****************************************/
     public void clickCreditCardOption(){
         explicitWaitvisibility(creditCardLink);
         getDriver().findElement(creditCardLink).click();
         System.out.println("Customer has choose credit/debit card as payment option");
     }
-
+    /****************************************
+     * Method To Enter Credit Card Details
+     *****************************************/
     public void enterCreditCardDetails(String creditCardNumber){
         getDriver().findElement(ccNumber).sendKeys(creditCardNumber);
         getDriver().findElement(expiry_Date).sendKeys(configuration.getProperty(EXPIRYDATE));
@@ -34,6 +39,9 @@ public class PaymentService extends Base {
 
     }
 
+    /****************************************
+     * Method To click Credit Card Pay button & verifying error if any
+     *****************************************/
     public boolean creditPayClick(){
         boolean ccflag = false;
         getDriver().findElement(payClick).click();
@@ -55,6 +63,9 @@ public class PaymentService extends Base {
         return ccflag;
     }
 
+    /****************************************
+     * Method To provide password
+     *****************************************/
     public void providePassword(){
         elementWait(8000);
         getDriver().switchTo().frame(0);
@@ -62,6 +73,9 @@ public class PaymentService extends Base {
         getDriver().findElement(password).sendKeys(configuration.getProperty(OTP));
     }
 
+    /****************************************
+     * Method To click submit OTP
+     *****************************************/
 
     public void clickSubmitOtp(){
         getDriver().findElement(submitOtp).click();

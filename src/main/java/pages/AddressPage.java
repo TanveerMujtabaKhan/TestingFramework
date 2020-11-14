@@ -38,7 +38,9 @@ public class AddressPage extends Base {
         getDriver().findElement(postalCode).sendKeys(configuration.getProperty(POSTALCODE));
     }
 
-
+    /****************************************
+     * Method To checkout after adding address data
+     *****************************************/
     public void clickCheckout(){
         getDriver().findElement(checkout).click();
         System.out.println("Customer Address is added successfully ");

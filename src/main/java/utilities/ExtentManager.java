@@ -16,6 +16,7 @@ public class ExtentManager{
 	public static void setExtent() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
 		String str = sdf.format(new Date());
+		System.out.println(System.getProperty("user.dir")+"Midtrans_"+str+".html");
 		htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"Midtrans_"+str+".html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
